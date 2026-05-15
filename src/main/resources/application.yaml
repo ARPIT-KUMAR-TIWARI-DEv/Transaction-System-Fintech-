@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: pfms
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pfms_db
+    username: postgres
+    password: Anshu123@
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  redis:
+    host: localhost
+    port: 6379
+
+server:
+  port: 8086
+
+# JWT Config
+jwt:
+  secret: ArpitPFMS2026SuperSecretKeyForJwtToken@BiharPatnaSecureLongKey1234567890!@#
+  expiration: 86400000   # 24 hours
+
+# AES Encryption
+aes:
+  secret: Arpit@PFMS2026AES32CharSecretKey
+
+logging:
+  level:
+    com.arpit.pfms: DEBUG
